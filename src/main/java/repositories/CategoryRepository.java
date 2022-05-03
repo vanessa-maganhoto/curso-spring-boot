@@ -1,8 +1,9 @@
 package repositories;
 
+import entities.Category;
 import entities.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface OrderRepository extends JpaRepository<Order, Long> {
+public interface CategoryRepository extends JpaRepository<Category, Long> {
 
 }

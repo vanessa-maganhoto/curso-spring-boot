@@ -6,6 +6,7 @@ import entities.enums.OrderStatus;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.HashSet;
 
 @Entity
 @Table(name = "tb_order")
