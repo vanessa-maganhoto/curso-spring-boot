@@ -1,6 +1,7 @@
 package entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import entities.enums.OrderStatus;
 
 import javax.persistence.*;
 import java.io.Serializable;
