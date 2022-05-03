@@ -1,10 +1,9 @@
-package service;
+package com.cursospringboot.spring.service;
 
-import entities.Order;
-import entities.User;
+import com.cursospringboot.spring.entities.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repositories.OrderRepository;
+import com.cursospringboot.spring.repositories.OrderRepository;
 
 
 import java.util.List;

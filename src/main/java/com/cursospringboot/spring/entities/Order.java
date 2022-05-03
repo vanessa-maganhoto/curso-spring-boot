@@ -1,12 +1,11 @@
-package entities;
+package com.cursospringboot.spring.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import entities.enums.OrderStatus;
+import com.cursospringboot.spring.entities.enums.OrderStatus;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
-import java.util.HashSet;
 
 @Entity
 @Table(name = "tb_order")
@@ -26,11 +25,11 @@ public class Order implements Serializable {
     @JoinColumn(name = "client_id")
     private User client;
 
-    @OneToMany(mappedBy = "id.order")
-    private Set<OrderItem> items = new HashSet<>();
-
-    @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
-    private Payment payment;
+//    @OneToMany(mappedBy = "id.order")
+//    private Set<OrderItem> items = new HashSet<>();
+//
+//    @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
+//    private Payment payment;
 
     public Order() {
     }
@@ -83,25 +82,25 @@ public class Order implements Serializable {
         this.client = client;
     }
 
-    public Payment getPayment() {
-        return payment;
-    }
-
-    public void setPayment(Payment payment) {
-        this.payment = payment;
-    }
-
-    public Set<OrderItem> getItems() {
-        return items;
-    }
-
-    public Double getTotal() {
-        double sum = 0.0;
-        for (OrderItem x : items) {
-            sum += x.getSubTotal();
-        }
-        return sum;
-    }
+//    public Payment getPayment() {
+//        return payment;
+//    }
+//
+//    public void setPayment(Payment payment) {
+//        this.payment = payment;
+//    }
+//
+//    public Set<OrderItem> getItems() {
+//        return items;
+//    }
+//
+//    public Double getTotal() {
+//        double sum = 0.0;
+//        for (OrderItem x : items) {
+//            sum += x.getSubTotal();
+//        }
+//        return sum;
+//    }
 
     @Override
     public int hashCode() {

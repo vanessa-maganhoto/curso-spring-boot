@@ -1,9 +1,9 @@
-package service;
+package com.cursospringboot.spring.service;
 
-import entities.Product;
+import com.cursospringboot.spring.entities.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repositories.ProductRepository;
+import com.cursospringboot.spring.repositories.ProductRepository;
 
 import java.util.List;
 import java.util.Optional;
